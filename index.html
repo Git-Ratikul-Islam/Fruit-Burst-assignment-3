@@ -18,52 +18,110 @@
             .lato-font {
                   font-family: 'Lato', sans-serif;
             }
+
+            Hide the menu bar by default for larger devices .menu {
+                  display: none;
+            }
+
+
+            @media only screen and (max-width: 768px) {
+                  .menu {
+                        display: block;
+                  }
+            }
+
+
+
+            /* Hide the navigation bar for small devices */
+            @media screen and (max-width: 767px) {
+
+                  .navbar-container .navbar-start,
+                  .navbar-container .navbar-end {
+                        display: none;
+                  }
+
+                  .navbar-container .navbar-center {
+                        gap: 0;
+
+                  }
+            }
       </style>
 </head>
 
 <body class="lato-font">
       <header class="container mx-auto">
             <nav>
-                  <div class="navbar bg-base-100 bg-[#F85559] rounded-[600px] p-3 mt-10">
-                        <div class="navbar-start ">
-                              <!-- <div class="dropdown">
-                                    <label tabindex="0" class="btn btn-ghost btn-circle">
-                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                      d="M4 6h16M4 12h16M4 18h7" />
-                                          </svg>
-                                    </label>
-                                    <ul tabindex="0"
-                                          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                          <li><a>Homepage</a></li>
-                                          <li><a>Portfolio</a></li>
-                                          <li><a>About</a></li>
-                                    </ul>
-                              </div> -->
-                              <div>
-                                    <ul class="flex lg:gap-7 md:gap-3 ml-1 text-white">
-                                          <li><a>Home</a></li>
-                                          <li><a>About Us</a></li>
-                                          <li><a>Shop</a></li>
-                                          <li><a>All Fruits</a></li>
-                                    </ul>
+                  <div class="navbar-container">
+                        <div class="navbar bg-base-100 bg-[#F85559] rounded-[600px] p-3 mt-10">
+                              <div class="navbar-start">
+                                    <div>
+                                          <ul class="flex lg:gap-7 md:gap-3 ml-1 text-white">
+                                                <li><a>Home</a></li>
+                                                <li><a>About Us</a></li>
+                                                <li><a>Shop</a></li>
+                                                <li><a>All Fruits</a></li>
+                                          </ul>
+                                    </div>
                               </div>
-                        </div>
-                        <div class="navbar-center md:gap-1.5 lg:gap-3">
-                              <img src="./images/logo.png" alt="">
-                              <p class="text-white text-4xl">Fruit Brust</p>
-                        </div>
-                        <div class="navbar-end relative">
-                              <input type="text" placeholder="Search here"
-                                    class="input input-bordered input-md w-full max-w-xs rounded-[50px]" />
-                              <i class="fa-solid fa-magnifying-glass absolute right-6"></i>
-
+                              <div class="navbar-center md:gap-1.5 lg:gap-3">
+                                    <img src="./images/logo.png" alt="">
+                                    <p class="text-white text-4xl">Fruit Brust</p>
+                              </div>
+                              <div class="navbar-end relative">
+                                    <input type="text" placeholder="Search here"
+                                          class="input input-bordered input-md w-full max-w-xs rounded-[50px]" />
+                                    <i class="fa-solid fa-magnifying-glass absolute right-6"></i>
+                              </div>
                         </div>
                   </div>
             </nav>
+            <div class="navbar bg-base-100 relative">
+                  <div class="dropdown">
+                        <label tabindex="0" class="">
+                              <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 lg:hidden md:hidden sm:visible absolute left-[550px] bottom-16"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M4 6h16M4 12h16M4 18h7" />
+                              </svg>
+                        </label>
+                        <ul tabindex="0"
+                              class="menu menu-sm dropdown-content mt-3 z-[1] p-5 shadow bg-base-100 rounded-box w-52 relative left-96">
+                              <li><a>Home</a></li>
+                              <li><a>About</a></li>
+                              <li><a>Shop</a></li>
+                              <li><a>All Fruits</a></li>
+                        </ul>
+                  </div>
+            </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
 
       </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <main>
             <!-- Banner sectin -->
             <section class="container mx-auto mt-16 relative">
@@ -136,10 +194,10 @@
                   <div
                         class="hidden  lg:flex  justify-center rounded-lg gap-24 bg-white shadow-md lg:w-[1196px] md:hidden mx-auto absolute -bottom-16 right-44 p-6">
                         <img src="./images/fruit1.png" alt="">
-                        <img src="./images/fruit1.png" alt="">
-                        <img src="./images/fruit1.png" alt="">
-                        <img src="./images/fruit1.png" alt="">
-                        <img src="./images/fruit1.png" alt="">
+                        <img src="./images/fruit2.png" alt="">
+                        <img src="./images/fruit3.png" alt="">
+                        <img src="./images/fruit5.png" alt="">
+                        <img src="./images/fruit6.png" alt="">
                   </div>
 
             </section>
